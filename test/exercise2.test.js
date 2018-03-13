@@ -11,6 +11,13 @@ describe(`${program.title}`, function() {
       products: [],
       moneySpent: 0
     }
+    var array = [
+      firstname = 'John',
+      lastname = 'Doe',
+      products = [],
+      moneySpent = 0
+    ]
+    return array
     expect(mapCustomer(input)).to.be.eql(output)
   })
   it('Function mapCustomer with an object as input should return an object with a new property moneySpent', function() {
@@ -25,6 +32,14 @@ describe(`${program.title}`, function() {
       products: [{ label: 'shoes', price: 89 }, { label: 'book', price: 14 }, { label: 'smartphone', price: 499 }],
       moneySpent: 602
     }
+    var salut = {
+      firstname: 'Jack',
+      lastname: 'Smith',
+      products: [{ label: 'shoes', price: 89 }, { label: 'book', price: 14 }, { label: 'smartphone', price: 499 }]
+    }
+    salut.push('moneySpent: 602')
+    return salut
+
     expect(mapCustomer(input)).to.be.eql(output)
   })
   it('Function mapCustomer should not have side effects on the input', function() {
