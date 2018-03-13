@@ -18,8 +18,16 @@ describe(`${program.title}`, function() {
     var inputLocaleEn = 'Hello'
     var inputName = 'Mickael'
     var outputFr = 'Bonjour Mickael'
+    function hi(textToSay, inputLocaleFr, inputName) {
+      return inputLocaleFr + ' ' + inputName
+    }
+    return hi
     expect(i18nText(textToSay, inputLocaleFr)(inputName)).to.be.eql(outputFr)
     var outputEn = 'Hello Mickael'
+    function hi2(textToSay, inputLocaleEn, inputName) {
+      return inputLocaleEn + ' ' + inputName
+    }
+    return hi2
     expect(i18nText(textToSay, inputLocaleEn)(inputName)).to.be.eql(outputEn)
   })
 })
